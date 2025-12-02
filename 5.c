@@ -3,18 +3,18 @@
 struct Student {
     int id;
     char *name;
-    float *marks;
+    int marks;
 }; 
 int main() {
     struct Student student1;
 
     student1.id=1234;
     student1.name="harsh";
-    student1.marks="21";
+    student1.marks=95;
 
     printf("Student ID: %d\n", student1.id);
     printf("Student Name: %s\n", student1.name);
-    printf("Marks: %s\n", student1.marks);
+    printf("Marks: %d\n", student1.marks);
 
     return 0;
 }
