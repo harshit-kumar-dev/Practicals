@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Name</title>
+</head>
+<body>
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput">
+    <button id="saveButton">Save Name</button>
+    <p id="displayName"></p>
+
+    <script>
+        let name = document.getElementById('nameInput');
+        let btn = document.getElementById('saveButton');
+        let para = document.getElementById('displayName');
+
+        btn.addEventListener('click', function() {
+            localStorage.setItem('savedName', name.value);
+        });
+
+        btn.addEventListener('click',()=>{
+            let savedName = localStorage.getItem('savedName');
+            para.textContent = 'Saved Name: ' + savedName;
+        });
+
+    </script>
+</body>
+</html>
